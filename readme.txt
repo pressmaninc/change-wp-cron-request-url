@@ -2,9 +2,9 @@
 Contributors: pressmaninc,muraokashotaro,hiroshisekiguchi,kazunao,naotoshigenari
 Tags: cron,wp-cron
 Requires at least: 4.9.8
-Tested up to: 4.9.8
+Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GNU GPL v2 or higher
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,5 +19,9 @@ The link is made to "Admin menu" > "Settings" > "Change WP Cron Request URL".
 2. Activate the plugin through the Plugins menu in WordPress.
 
 == Changelog ==
-= 1.0 =
+
+= 1.0.1 =
+* Fix: Wrong domain initialization.
+
+= 1.0.0 =
 - first version.
