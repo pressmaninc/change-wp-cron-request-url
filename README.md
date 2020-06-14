@@ -1,1 +1,1 @@
-# change-wp-cron-domain-and-port
+# change-wp-cron-request-url

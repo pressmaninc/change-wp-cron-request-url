@@ -3,7 +3,7 @@
  * Plugin Name: Change WP Cron Request URL
  * Plugin URI:
  * Description: Change the request url when wp-cron executed.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: PRESSMAN
  * Author URI: https://www.pressman.ne.jp/
  * License: GPLv2 or later
@@ -30,8 +30,8 @@ class Change_WP_Cron {
 		require_once( plugin_dir_path( __FILE__ ) . 'classes/class-domain-validator.php' );
 		require_once( plugin_dir_path( __FILE__ ) . 'classes/class-port-validator.php' );
 
+		register_uninstall_hook( __FILE__, 'cwc_uninstall' );
 		register_activation_hook( __FILE__, [ $this, 'activate' ] );
-		register_deactivation_hook( __FILE__, [ $this, 'deactivate' ] );
 
 		add_filter( 'cron_request', [ $this, 'change_cron_url' ], 9999 );
 	}
@@ -68,11 +68,6 @@ class Change_WP_Cron {
 				add_option( self::CHANGE_PORT, '' );
 			}
 		}
-	}
-
-	public function deactivate() {
-		delete_option( self::CHANGE_DOMAIN );
-		delete_option( self::CHANGE_PORT );
 	}
 
 	/**
@@ -122,3 +117,11 @@ class Change_WP_Cron {
 }
 
 Change_WP_Cron::get_instance();
+
+/**
+ * Uninstalls.
+ */
+function cwc_uninstall() {
+	delete_option( Change_WP_Cron::CHANGE_DOMAIN );
+	delete_option( Change_WP_Cron::CHANGE_PORT );
+}
