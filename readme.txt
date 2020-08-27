@@ -2,7 +2,7 @@
 Contributors: pressmaninc,muraokashotaro,hiroshisekiguchi,kazunao,naotoshigenari
 Tags: cron,wp-cron
 Requires at least: 4.9.8
-Tested up to: 5.4.2
+Tested up to: 5.5
 Requires PHP: 5.6
 Stable tag: 1.0.2
 License: GNU GPL v2 or higher
