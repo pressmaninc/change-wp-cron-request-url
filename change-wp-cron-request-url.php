@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Change WP Cron Request URL
- * Plugin URI: https://github.com/pressmaninc/change-wp-cron-request-url
+ * Plugin URI:
  * Description: Change the request url when wp-cron executed.
  * Version: 1.0.2
  * Author: PRESSMAN
